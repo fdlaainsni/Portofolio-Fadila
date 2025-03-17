@@ -314,10 +314,18 @@ p {
 
 /* Responsive Design */
 @media mobile (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
+    body {
+        padding-top: 60px; /* Sesuaikan dengan tinggi navbar */
     }
+
+    header {
+        position: fixed; /* Navbar tetap di atas */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+}
 
     header img {
         margin: 10px auto;
