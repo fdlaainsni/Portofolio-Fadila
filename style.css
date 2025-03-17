@@ -313,19 +313,15 @@ p {
 }
 
 /* Responsive Design */
-@media mobile (max-width: 768px) {
-    body {
-        padding-top: 60px; /* Sesuaikan dengan tinggi navbar */
-    }
-
+/* Responsive Design */
+@media (max-width: 768px) {
     header {
-        position: fixed; /* Navbar tetap di atas */
-        top: 0;
-        left: 0;
-        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        position: relative; /* Ubah dari sticky ke relative */
+        top: auto; /* Hilangkan properti top */
         z-index: 1000;
     }
-}
 
     header img {
         margin: 10px auto;
@@ -333,10 +329,22 @@ p {
 
     header nav ul {
         flex-direction: column;
+        background-color: #333; /* Tambahkan background untuk menu */
+        width: 100%; /* Lebar penuh */
+        padding: 10px 0; /* Padding atas dan bawah */
+        margin: 0; /* Hilangkan margin default */
     }
 
     header nav ul li {
         margin: 10px 0;
+    }
+
+    header nav ul li a {
+        color: #fff; /* Pastikan warna teks tetap putih */
+    }
+
+    #home {
+        padding-top: 20px; /* Tambahkan padding atas untuk menghindari navbar */
     }
 
     #home h1 {
@@ -361,7 +369,6 @@ p {
         height: 100px;
     }
 }
-
 @media tablet (min-width: 769px) and (max-width: 1024px) {
     header {
         padding: 10px 40px;
